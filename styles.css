@@ -418,11 +418,15 @@ body {
   .hero__content {
     padding: 2rem;
     margin-bottom: 90px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 
   }
 
   .hero__title {
     font-size: 2.5rem; /* Increased size for better readability */
+  
   }
 
   .hero__subtitle {
