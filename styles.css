@@ -411,7 +411,7 @@ body {
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
   .hero {
-    height: auto;
+    height: 850px;
     padding-bottom: 4rem; /* Ensure enough space for event elements */
   }
 
@@ -443,7 +443,6 @@ body {
   .hero__event-wrapper {
     position: absolute; /* Keep absolute positioning */
     bottom: 1.5rem;
-    right: 1.5rem;
     flex-direction: row; /* Maintain row direction */
     gap: 0.5rem; /* Reduce gap */
   }
