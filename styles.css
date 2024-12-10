@@ -411,7 +411,7 @@ body {
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
   .hero {
-    max-height: 1000px;
+    height: 1000px;
     padding-bottom: 4rem; /* Ensure enough space for event elements */
   }
 
