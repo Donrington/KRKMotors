@@ -417,7 +417,7 @@ body {
 
   .hero__content {
     padding: 2rem;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
 
   }
 
@@ -443,8 +443,10 @@ body {
   .hero__event-wrapper {
     position: absolute; /* Keep absolute positioning */
     bottom: 1.5rem;
+    left: 2.0rem;
     flex-direction: row; /* Maintain row direction */
     gap: 0.5rem; /* Reduce gap */
+  
   }
 
   .hero__event-image {
