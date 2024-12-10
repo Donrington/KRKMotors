@@ -215,41 +215,51 @@
   <script>
     AOS.init();
 
-    // Event rotation logic
     const eventItems = document.querySelectorAll('.hero__event-item');
-    const dots = document.querySelectorAll('.hero__event-dots .dot');
-    const eventImage = document.querySelector('.hero__event-image');
+const dots = document.querySelectorAll('.hero__event-dots .dot');
+const eventImage = document.querySelector('.hero__event-image');
 
-    let currentIndex = 0;
-    const totalEvents = eventItems.length;
-    const rotationInterval = 3000; // 3 seconds
+let currentIndex = 0;
+const totalEvents = eventItems.length;
+const rotationInterval = 3000; // 3 seconds
 
-    function showEvent(index) {
-      eventItems.forEach(item => item.classList.remove('active'));
-      dots.forEach(dot => dot.classList.remove('active'));
+function showEvent(index) {
+  // Remove active state from all, add to the current
+  eventItems.forEach(item => item.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
 
-      const activeItem = eventItems[index];
-      activeItem.classList.add('active');
-      dots[index].classList.add('active');
+  const activeItem = eventItems[index];
+  activeItem.classList.add('active');
+  dots[index].classList.add('active');
 
-      const newImageSrc = activeItem.getAttribute('data-image');
-      eventImage.src = newImageSrc;
-    }
+  // Change the image
+  const newImageSrc = activeItem.getAttribute('data-image');
+  // Remove fade-in class to reset it
+  eventImage.classList.remove('fade-in');
+  // Force browser to reflow (so that removing & adding class triggers the transition)
+  void eventImage.offsetWidth;
+  eventImage.src = newImageSrc;
+  eventImage.classList.add('fade-in');
+}
 
-    function nextEvent() {
-      currentIndex = (currentIndex + 1) % totalEvents;
-      showEvent(currentIndex);
-    }
+function nextEvent() {
+  currentIndex = (currentIndex + 1) % totalEvents;
+  showEvent(currentIndex);
+}
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentIndex = index;
-        showEvent(currentIndex);
-      });
-    });
-
-    const intervalId = setInterval(nextEvent, rotationInterval);
+// Event listener for dots
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
     showEvent(currentIndex);
+  });
+});
+
+// Automatic rotation
+const intervalId = setInterval(nextEvent, rotationInterval);
+
+// Initialize the first event
+showEvent(currentIndex);
 
     // Navbar toggler logic
     const navToggler = document.querySelector('.nav__toggler');
