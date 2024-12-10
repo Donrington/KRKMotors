@@ -17,11 +17,7 @@
           <span class="nav__icon"></span>
           <a href="#" class="nav__title">KRKMotors</a>
         </div>
-        <button class="nav__toggler" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+     
         <ul class="nav__links">
           <li><a href="#">Home</a></li>
           <li><a href="#">About Us</a></li>
@@ -29,12 +25,19 @@
           <li><a href="#">Inventory</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+
         <div class="nav__action" data-aos="fade-left">
-          <a href="#" class="btn-primary">Get Started</a>
+          <a href="#" class="btn-primary desktop-only">Get Started</a>
+          <button class="nav__toggler mobile-only" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </div>
   </header>
+  
 
   <main><section class="hero">
     <div class="hero__gradient-overlay"></div>
@@ -261,22 +264,28 @@ const intervalId = setInterval(nextEvent, rotationInterval);
 // Initialize the first event
 showEvent(currentIndex);
 
-    // Navbar toggler logic
-    const navToggler = document.querySelector('.nav__toggler');
-    const navLinks = document.querySelector('.nav__links');
 
-    navToggler.addEventListener('click', () => {
-      navToggler.classList.toggle('active');
-      // Toggle between showing and hiding the nav links
-      if(navLinks.style.display === 'block') {
-        navLinks.style.display = 'none';
-      } else {
-        navLinks.style.display = 'block';
-      }
+// Sticky navbar logic
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) { // Adjust the scroll distance as desired
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
 
-      // Add a small transition for a smoother appearance
-      navLinks.classList.toggle('expanded');
-    });
+// Navbar toggler logic
+const navToggler = document.querySelector('.nav__toggler');
+const navLinks = document.querySelector('.nav__links');
+
+navToggler.addEventListener('click', () => {
+  navToggler.classList.toggle('active');
+  // Toggle between showing and hiding the nav links
+  // Use classes instead of inline styling for consistency
+  navLinks.classList.toggle('expanded');
+});
+
 
 
 

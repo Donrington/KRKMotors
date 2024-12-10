@@ -29,13 +29,27 @@ body {
   margin: 0 auto;
 }
 
-/* HEADER / NAV */
 .header {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 1rem 0;
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+/* When sticky class is added on scroll */
+.header.sticky {
+  position: fixed;
+  background: transparent;
+  padding: 0.5rem 0; /* Slightly adjust padding when sticky */
+}
+
+/* Desktop/Mobile toggle classes */
+.desktop-only {
+  display: inline-block;
+}
+.mobile-only {
+  display: none;
 }
 
 .nav {
@@ -47,6 +61,7 @@ body {
   padding: 0.5rem 1rem;
   height:50px;
   position: relative;
+  transition: background 0.3s ease;
 }
 
 .nav__brand {
@@ -66,13 +81,17 @@ body {
   text-decoration: none;
 }
 
+/* Keep nav__links as is for desktop */
 .nav__links {
-  font-family: 'Raleway', sans-serif;
   display: flex;
   align-items: center;
   gap: 2rem;
   list-style: none;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease;
+  background: none;
+  opacity: 1;
+  pointer-events: auto;
+  max-height: none;
 }
 
 .nav__links a {
@@ -92,13 +111,13 @@ body {
   border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-
   transition: background 0.3s ease, color 0.3s ease;
 }
 .nav__action .btn-primary:hover {
   background: var(--primary-color);
   color: var(--text-light);
 }
+
 /* Toggler */
 .nav__toggler {
   display: none;
@@ -144,38 +163,18 @@ body {
 .nav__toggler.active span:nth-child(3) {
   transform: translateY(-10px) rotate(-45deg);
 }
-.nav__links {
-  /* Default (desktop) styles */
-  display: flex; 
-  align-items: center;
-  gap: 2rem;
-  list-style: none;
-  transition: color 0.3s ease;
-  position: static; /* Ensure they're not absolutely positioned by default */
-  background: none;
-  opacity: 1;
-  pointer-events: auto;
-  max-height: none;
-}
 
-.nav__links a {
-  color: var(--text-mid);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.nav__links a:hover {
-  color: var(--primary-color);
-}
-
-/* Toggler and Mobile Styles */
 @media (max-width: 768px) {
-  .nav__toggler {
-    display: flex;
+  /* Hide get started button on mobile */
+  .desktop-only {
+    display: none;
   }
 
-  /* Override the default nav__links for mobile */
+  /* Show toggler on mobile */
+  .mobile-only {
+    display: inline-flex;
+  }
+
   .nav__links {
     flex-direction: column;
     overflow: hidden;
@@ -207,7 +206,10 @@ body {
     color: var(--text-light);
     font-weight: 600;
   }
-}/* HERO SECTION */
+}
+
+
+/* HERO SECTION */
 .hero {
   position: relative;
   width: 100%;
