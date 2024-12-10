@@ -192,7 +192,7 @@ body {
   }
 
   .nav__links.expanded {
-    max-height: 300px; /* Adjust based on menu size */
+    max-height: 400px; /* Adjust based on menu size */
     opacity: 1;
     pointer-events: auto;
   }
