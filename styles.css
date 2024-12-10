@@ -207,8 +207,7 @@ body {
     color: var(--text-light);
     font-weight: 600;
   }
-}
-/* HERO SECTION */
+}/* HERO SECTION */
 .hero {
   position: relative;
   width: 100%;
@@ -237,7 +236,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 0;
 }
+
 .hero__content {
   position: relative;
   z-index: 2;
@@ -246,10 +247,11 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   padding-top: 5rem;
+  padding-left: 2rem;
 }
 
 .hero__title {
-  font-family: 'lora', 'serif';
+  font-family: 'Lora', serif;
   font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -279,7 +281,7 @@ body {
 
 .hero__btn {
   background: var(--primary-color);
-  padding: 1.0rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 30px;
   font-weight: bold;
   color: var(--text-light);
@@ -292,6 +294,7 @@ body {
   background: var(--text-light);
   color: var(--primary-color);
 }
+
 .hero__event-wrapper {
   position: absolute;
   bottom: 2rem;
@@ -405,35 +408,66 @@ body {
   opacity: 1;
 }
 
-/* FOOTER */
-.footer {
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #ccc;
-}
-
 /* RESPONSIVE STYLES */
 @media (max-width: 768px) {
+  .hero {
+    height: 800px;
+    padding-bottom: 4rem; /* Ensure enough space for event elements */
+  }
+
+  .hero__content {
+    padding: 2rem; /* Adjust padding to center content */
+  }
+
   .hero__title {
-    font-size: 2.2rem;
+    font-size: 2.5rem; /* Increased size for better readability */
+  }
+
+  .hero__subtitle {
+    font-size: 1.6rem; /* Increased size for better readability */
+    max-width: 100%; /* Allow subtitle to use full width */
+  }
+
+  .hero__features {
+    font-size: 1rem;
+  }
+
+  .hero__btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero__event-wrapper {
-    position: static;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
+    position: absolute; /* Keep absolute positioning */
+    bottom: 1.5rem;
+    right: 1.5rem;
+    flex-direction: row; /* Maintain row direction */
+    gap: 0.5rem; /* Reduce gap */
   }
 
   .hero__event-image {
-    width: 80%;
-    height: auto;
+    width: 120px; /* Smaller size */
+    height: 200px; /* Smaller height */
   }
 
   .hero__event-card {
-    width: 90%;
-    margin-top: 1rem;
+    width: 250px; /* Smaller width */
+    padding: 1rem;
+  }
+
+  .btn-secondary {
+    padding: 0.6rem 0.6rem;
+    font-size: 0.8rem;
+    width: 80%; /* Adjust width for better fit */
+  }
+
+  .hero__event-title {
+    font-size: 1.2rem; /* Slightly smaller for fit */
+  }
+
+  .hero__event-desc {
+    font-size: 0.85rem; /* Slightly smaller for fit */
   }
 }
 
@@ -805,4 +839,14 @@ body {
   .gallery-desc {
     font-size: 1rem;
   }
+}
+
+
+
+/* FOOTER */
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
 }
