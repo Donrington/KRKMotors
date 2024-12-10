@@ -416,7 +416,9 @@ body {
   }
 
   .hero__content {
-    padding: 2rem; /* Adjust padding to center content */
+    padding: 2rem;
+    margin-bottom: 50px;
+
   }
 
   .hero__title {
