@@ -21,7 +21,10 @@ body {
   color: var(--text-light);
   background: #000;
 }
-
+.nav-logo{
+width: 6rem;
+height: auto;
+}
 /* Utilities */
 .container {
   width: 90%;
