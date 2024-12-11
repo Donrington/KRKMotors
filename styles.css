@@ -1041,7 +1041,7 @@ body {
 .brands-track {
   display: flex;
   gap: 4rem; /* Increased gap for more spacing */
-  animation: scrollBrands 40s linear infinite; /* Slower scroll for better visibility */
+  animation: scrollBrands 20s linear infinite; /* Slower scroll for better visibility */
   will-change: transform;
 }
 
@@ -1270,6 +1270,7 @@ body {
   .final-section__content-container {
     flex-direction: column;
     align-items: center;
+ 
     margin-top: -50px; /* Reduce overlap */
     padding: 2rem 1rem;
     gap: 1rem;
@@ -1283,6 +1284,8 @@ body {
   .final-section__content {
     width: 90%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .final-section__title {
