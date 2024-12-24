@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KRKMotors Inventory</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"  />
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <!-- Fonts (Lora & Raleway) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Raleway:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main CSS (Include the styles below or in a separate file) -->
+  <link rel="stylesheet" href="inventory.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="nav">
+            <div class="nav__brand" data-aos="fade-right">
+              <span class="nav__icon"></span>
+              <a href="#" class="nav__title"><img src="krklogo.png" alt="KRKMotors logo" class="nav-logo"></a>
+            </div>
+         
+            <ul class="nav__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html #about">About Us</a></li>
+              <li><a href="index.html #services">Services</a></li>
+              <li><a href="#">Inventory</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="index.html #contact">Contact</a></li>
+            </ul>
+    
+            <div class="nav__action" data-aos="fade-left">
+              <a href="tel:+13478651448" class="btn-primary desktop-only">Call Us</a>
+              <button class="nav__toggler mobile-only" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header><!-- INVENTORY SECTION -->
+
+      
+        <!-- Inventory Cards Grid -->
+<!-- INVENTORY SECTION -->
+<section class="inventory-section">
+    <div class="content-container inventory__header">
+      <h2 class="inventory__title">Our Inventory</h2>
+      <p class="inventory__subtitle">
+        Discover an exquisite selection of high-performance vehicles, from sleek sports cars
+        to refined luxury sedans, curated to meet the demands of discerning drivers.
+      </p>
+  
+      <!-- Search & Sorting Controls -->
+      <div class="inventory__controls">
+        <div class="inventory__search">
+          <input
+            type="text"
+            placeholder="Search vehicles..."
+            aria-label="Search vehicles"
+            id="searchInput"
+          />
+          <button aria-label="Search" id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+  
+        <div class="inventory__sort">
+          <label for="sortBy">Sort By:</label>
+          <select name="sortBy" id="sortBy">
+            <option value="latest" class="">Latest</option>
+            <option value="lowestPrice">Price: Low to High</option>
+            <option value="highestPrice">Price: High to Low</option>
+            <option value="model">Model (A-Z)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Static Inventory Cards Grid -->
+    <div class="container inventory__grid" id="inventoryGrid">
+      <!-- Card 1 -->
+      <div
+        class="inventory__card"
+        data-car-name="Mercedes AMG GT"
+        data-year="2022"
+        data-miles="5000"
+        data-price="120000"
+        data-date="2023-06-15"
+      >
+        <div class="inventory__card-image">
+          <img src="merc2.jpg" alt="Car Model 1" loading="lazy" />
+        </div>
+        <div class="inventory__card-content">
+          <h3 class="inventory__card-title">Mercedes AMG GT</h3>
+          <p class="inventory__card-details">Year: 2022 &bull; 5,000 Miles</p>
+          <p class="inventory__card-price">Contact for Price</p>
+          <p class="inventory__card-desc">
+            A perfect balance of power and refinement, the AMG GT delivers an unrivaled
+            driving experience with its handcrafted V8 and cutting-edge technology.
+          </p>
+          <button class="inventory__card-btn" data-car="Mercedes AMG GT">Contact Us</button>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div
+        class="inventory__card"
+        data-car-name="Porsche 911 Turbo S"
+        data-year="2021"
+        data-miles="10000"
+        data-price="150000"
+        data-date="2023-06-10"
+      >
+        <div class="inventory__card-image">
+          <img src="porsche.jpg" alt="Car Model 2" loading="lazy" />
+        </div>
+        <div class="inventory__card-content">
+          <h3 class="inventory__card-title">Porsche 911 Turbo S</h3>
+          <p class="inventory__card-details">Year: 2021 &bull; 10,000 Miles</p>
+          <p class="inventory__card-price">Contact for Price</p>
+          <p class="inventory__card-desc">
+            Precision engineering meets iconic style. Experience legendary handling
+            and performance in the timeless 911 Turbo S.
+          </p>
+          <button class="inventory__card-btn" data-car="Porsche 911 Turbo S">Contact Us</button>
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div
+        class="inventory__card"
+        data-car-name="Lamborghini Huracán EVO"
+        data-year="2022"
+        data-miles="2500"
+        data-price="230000"
+        data-date="2023-07-01"
+      >
+        <div class="inventory__card-image">
+          <img src="lambo2.jpg" alt="Car Model 3" loading="lazy" />
+        </div>
+        <div class="inventory__card-content">
+          <h3 class="inventory__card-title">Lamborghini Huracán EVO</h3>
+          <p class="inventory__card-details">Year: 2022 &bull; 2,500 Miles</p>
+          <p class="inventory__card-price">Contact for Price</p>
+          <p class="inventory__card-desc">
+            Embrace the thrill of a V10 masterpiece that merges aerodynamics,
+            agility, and pure unadulterated speed into a stunning supercar package.
+          </p>
+          <button class="inventory__card-btn" data-car="Lamborghini Huracán EVO">Contact Us</button>
+        </div>
+      </div>
+      <!-- Add more cards with data- attributes as needed -->
+    </div>
+  </section>
+  
+  <!-- CONTACT MODAL (Hidden by default) -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close Modal">&times;</button>
+      <h3 class="modal-title">Contact Us</h3>
+      <p class="modal-subtitle">
+        Interested in <span id="modalCarName">this car</span>? Please fill out the form or connect via social links below.
+      </p>
+      <!-- Contact Form -->
+      <form class="modal-form">
+        <label for="fullName">Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Your Name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="modal-submit-btn">Send</button>
+      </form>
+      <!-- Social Links -->
+      <div class="modal-socials">
+        <a href="#" class="modal-social-link" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="#" class="modal-social-link" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#" class="modal-social-link" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i> Facebook
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+
+
+    <footer >
+      <div class="footer__container container">
+        
+        <!-- Section 1: Quick Links -->
+        <div class="footer__section footer_display" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="footer__title ">Quick Links</h3>
+          <ul class="footer__links ">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Section 2: Services & Inventory -->
+        <div class="footer__section footer_display" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="footer__title">Our Services</h3>
+          <ul class="footer__links ">
+            <li><a href="#">Test Drive</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Maintenance</a></li>
+            <li><a href="#">Trade-In</a></li>
+            <li><a href="#">Warranty</a></li>
+          </ul>
+        </div>
+        
+        <!-- Section 3: Contact & Social Media -->
+        <div class="footer__section" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="footer__title">Contact Us</h3>
+          <p class="footer__contact">
+            <i class="fa-solid fa-location-dot"></i> 1234 Luxury Ave, Motor City, USA
+          </p>
+          <p class="footer__contact">
+            <i class="fa-solid fa-phone"></i>   +1 (347) 865-1448 <br> +234 (816) 879-3282
+          </p>
+          <p class="footer__contact">
+            <i class="fa-solid fa-envelope"></i> info@krkmotors.com
+          </p>
+          
+          <!-- Social Media Links -->
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+              <a href="#" class="footer__social-link" aria-label="Whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Divider -->
+      <hr class="footer__divider">
+      
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p>&copy; 2024 KRKMotors. All rights reserved.</p>
+      </div>
+  
+      <button class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </footer>
+    
+  </div>
+  <!-- Font Awesome (For icons, if not already included) -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
+
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Navbar toggler logic
+const navToggler = document.querySelector('.nav__toggler');
+const navLinks = document.querySelector('.nav__links');
+
+navToggler.addEventListener('click', () => {
+  navToggler.classList.toggle('active');
+  // Toggle between showing and hiding the nav links
+  // Use classes instead of inline styling for consistency
+  navLinks.classList.toggle('expanded');
+});
+
+// Sticky navbar logic
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) { // Adjust the scroll distance as desired
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+
+AOS.init();
+
+
+const backToTopButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // Show button after scrolling down 300px
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+  // DOM elements
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+  const sortBySelect = document.getElementById('sortBy');
+  const inventoryGrid = document.getElementById('inventoryGrid');
+
+  // Modal elements
+  const modalOverlay = document.getElementById('contactModal');
+  const modalCloseBtn = document.querySelector('.modal-close');
+  const modalCarName = document.getElementById('modalCarName');
+
+  // Collect all static cards
+  let cards = Array.from(document.querySelectorAll('.inventory__card'));
+
+  // =============== MODAL LOGIC ===============
+  // Open modal on "View Details"
+  cards.forEach(card => {
+    const btn = card.querySelector('.inventory__card-btn');
+    btn.addEventListener('click', () => {
+      const carName = btn.getAttribute('data-car');
+      modalCarName.textContent = carName;
+      modalOverlay.classList.add('active');
+    });
+  });
+
+  // Close modal on X or overlay click
+  modalCloseBtn.addEventListener('click', () => {
+    modalOverlay.classList.remove('active');
+  });
+  modalOverlay.addEventListener('click', e => {
+    if (e.target === modalOverlay) {
+      modalOverlay.classList.remove('active');
+    }
+  });
+
+  // =============== SEARCH LOGIC ===============
+  function searchInventory(query) {
+    const lowerQuery = query.toLowerCase();
+    cards.forEach(card => {
+      const carName = card.dataset.carName.toLowerCase();
+      // If the name doesn't match query, hide it
+      if (!carName.includes(lowerQuery)) {
+        card.style.display = 'none';
+      } else {
+        card.style.display = 'block';
+      }
+    });
+  }
+
+  // Search on button click
+  searchBtn.addEventListener('click', () => {
+    searchInventory(searchInput.value.trim());
+  });
+  // Search on "Enter" key
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      searchInventory(searchInput.value.trim());
+    }
+  });
+
+  // =============== SORT LOGIC ===============
+  function sortInventory(criteria) {
+    // We'll reorder the DOM elements in inventoryGrid
+    // Convert NodeList -> Array to reorder easily
+    let sorted = [...cards];
+
+    switch (criteria) {
+      case 'latest':
+        // Sort by data-date descending
+        sorted.sort((a, b) => 
+          new Date(b.dataset.date) - new Date(a.dataset.date)
+        );
+        break;
+      case 'lowestPrice':
+        // Sort by data-price ascending
+        sorted.sort((a, b) => 
+          parseInt(a.dataset.price) - parseInt(b.dataset.price)
+        );
+        break;
+      case 'highestPrice':
+        // Sort by data-price descending
+        sorted.sort((a, b) => 
+          parseInt(b.dataset.price) - parseInt(a.dataset.price)
+        );
+        break;
+      case 'model':
+        // Sort by data-car-name alphabetically
+        sorted.sort((a, b) => 
+          a.dataset.carName.localeCompare(b.dataset.carName)
+        );
+        break;
+      default:
+        // no change
+        break;
+    }
+
+    // Now reorder them in the DOM
+    sorted.forEach(card => inventoryGrid.appendChild(card));
+    // Update the global 'cards' array to reflect the new order
+    cards = sorted;
+  }
+
+  // Sort on dropdown change
+  sortBySelect.addEventListener('change', e => {
+    sortInventory(e.target.value);
+  });
+  </script>
+</body>
+</html>

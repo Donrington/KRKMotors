@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KRKMotors Gallery</title>
+  
+  <!-- Google Fonts: Lora & Raleway -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons (Optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"  />
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="gallery.css">
+  
+  <!-- Optional: AOS CSS for Animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  
+  <style>
+    /* Include any additional inline styles if necessary */
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="nav">
+            <div class="nav__brand" data-aos="fade-right">
+              <span class="nav__icon"></span>
+              <a href="#" class="nav__title"><img src="krklogo.png" alt="KRKMotors logo" class="nav-logo"></a>
+            </div>
+         
+            <ul class="nav__links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html #about">About Us</a></li>
+                <li><a href="index.html #services">Services</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="index.html #contact">Contact</a></li>
+              </ul>
+            <div class="nav__action" data-aos="fade-left">
+              <a href="tel:+13478651448" class="btn-primary desktop-only">Call Us</a>
+              <button class="nav__toggler mobile-only" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container gallery__header">
+      <h2 class="gallery__title">Our Gallery</h2>
+      <p class="gallery__subtitle">
+        Explore our curated collection of stunning vehicles that exemplify luxury, performance, and timeless design.
+      </p>
+    </div>
+
+    <!-- Filter Controls -->
+<div class="gallery__filters" data-aos="fade-up" data-aos-delay="700">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="sports">Sports Cars</button>
+    <button class="filter-btn" data-filter="luxury">Luxury Sedans</button>
+    <button class="filter-btn" data-filter="suv">SUVs</button>
+  </div>
+  
+    <!-- Gallery Grid -->
+    <div class="container gallery__grid">
+      <!-- Gallery Item 1 -->
+      <div class="gallery__item sports"   role="button" tabindex="0"   data-category="sports"  data-aos="zoom-in" data-aos-delay="100" data-category="sports">
+        <img src="mercedes.jpg" alt="Mercedes AMG GT" class="gallery__img">
+        <div class="gallery__overlay">
+          <h3 class="gallery__caption">Mercedes AMG GT</h3>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 2 -->
+      <div class="gallery__item sports"   role="button" tabindex="0"   data-category="sports"  data-aos="zoom-in" data-aos-delay="200">
+        <img src="porsche.jpg" alt="Porsche 911 Turbo S" class="gallery__img">
+        <div class="gallery__overlay">
+          <h3 class="gallery__caption">Porsche 911 Turbo S</h3>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 3 -->
+      <div class="gallery__item sports"  role="button" tabindex="0"   data-category="sports"  data-aos="zoom-in" data-aos-delay="300">
+        <img src="lambo2.jpg" alt="Lamborghini Huracán EVO" class="gallery__img">
+        <div class="gallery__overlay">
+          <h3 class="gallery__caption">Lamborghini Huracán EVO</h3>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 4 -->
+      <div class="gallery__item sports"  role="button" tabindex="0"  data-category="suv"  data-aos="zoom-in" data-aos-delay="400">
+        <img src="WhiteInfinitiQX60.jpg" alt="White Infiniti QX60" class="gallery__img">
+        <div class="gallery__overlay">
+          <h3 class="gallery__caption">White Infiniti QX60</h3>
+        </div>
+      </div> 
+      
+      <!-- Gallery Item 5 -->
+      <div class="gallery__item suv"   role="button" tabindex="0"  data-category="suv"  data-aos="zoom-in" data-aos-delay="500">
+        <img src="Gwagon63.jpg" alt="Mercedes G63" class="gallery__img">
+        <div class="gallery__overlay">
+          <h3 class="gallery__caption">Mercedes G63</h3>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 6 -->
+      <div class="gallery__item suv"  role="button" tabindex="0"  data-category="suv"  data-aos="zoom-in" data-aos-delay="600">
+        <img src="rangerover.jpg" alt="Range Rover Evoque" class="gallery__img">
+        <div class="gallery__overlay">
+          <h3 class="gallery__caption">Range Rover Evoque</h3>
+        </div>
+      </div>
+      
+      <!-- Add more gallery items as needed -->
+    </div>
+    
+    <!-- Optional: Lightbox Modal (for viewing larger images) -->
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox__close">&times;</span>
+      <img class="lightbox__content" id="lightboxImg" src="#" alt="Enlarged Image">
+      <div class="lightbox__caption" id="lightboxCaption"></div>
+    </div>
+  </section>
+  
+  <div class="footer">
+
+
+    <footer >
+      <div class="footer__container container">
+        
+        <!-- Section 1: Quick Links -->
+        <div class="footer__section footer_display" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="footer__title ">Quick Links</h3>
+          <ul class="footer__links ">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Section 2: Services & Inventory -->
+        <div class="footer__section footer_display" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="footer__title">Our Services</h3>
+          <ul class="footer__links ">
+            <li><a href="#">Test Drive</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Maintenance</a></li>
+            <li><a href="#">Trade-In</a></li>
+            <li><a href="#">Warranty</a></li>
+          </ul>
+        </div>
+        
+        <!-- Section 3: Contact & Social Media -->
+        <div class="footer__section" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="footer__title">Contact Us</h3>
+          <p class="footer__contact">
+            <i class="fa-solid fa-location-dot"></i> 1234 Luxury Ave, Motor City, USA
+          </p>
+          <p class="footer__contact">
+            <i class="fa-solid fa-phone"></i>   +1 (347) 865-1448 <br> +234 (816) 879-3282
+          </p>
+          <p class="footer__contact">
+            <i class="fa-solid fa-envelope"></i> info@krkmotors.com
+          </p>
+          
+          <!-- Social Media Links -->
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link" aria-label="X">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+              <a href="#" class="footer__social-link" aria-label="Whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- Divider -->
+      <hr class="footer__divider">
+      
+      <!-- Copyright -->
+      <div class="footer__bottom">
+        <p>&copy; 2024 KRKMotors. All rights reserved.</p>
+      </div>
+  
+      <button class="back-to-top" aria-label="Back to Top">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </footer>
+    
+  <!-- AOS JS for Animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
+
+></script>
+  
+
+  
+  <!-- Main JS -->
+  <script src="gallery.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    // Gallery.js
+
+// Lightbox Functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryItems = document.querySelectorAll('.gallery__item');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.querySelector('.lightbox__close');
+  
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const imgSrc = item.querySelector('.gallery__img').src;
+      const imgAlt = item.querySelector('.gallery__img').alt;
+      
+      lightboxImg.src = imgSrc;
+      lightboxImg.alt = imgAlt;
+      lightboxCaption.textContent = imgAlt;
+      
+      lightbox.style.display = 'block';
+    });
+  });
+  
+  // Close modal when 'X' is clicked
+  lightboxClose.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+  
+  // Close modal when clicking outside the image
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+});
+// Filtering Functionality
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Remove 'active' class from all buttons
+    filterButtons.forEach(button => button.classList.remove('active'));
+    // Add 'active' class to the clicked button
+    btn.classList.add('active');
+    
+    const filter = btn.getAttribute('data-filter');
+    filterGallery(filter);
+  });
+});
+
+function filterGallery(filter) {
+  const galleryItems = document.querySelectorAll('.gallery__item');
+  
+  galleryItems.forEach(item => {
+    const itemCategory = item.getAttribute('data-category');
+    
+    if (filter === 'all' || itemCategory === filter) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+// Infinite Scroll (Basic Example)
+const galleryGrid = document.getElementById('inventoryGrid'); // Adjust ID if necessary
+let loadMoreThreshold = 300; // Pixels from bottom to trigger load
+
+window.addEventListener('scroll', () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - loadMoreThreshold) {
+    // Load more images here
+    // This could involve fetching more data and appending to the gallery
+    // For demonstration, you might duplicate existing items or load predefined ones
+  }
+});
+
+galleryItems.forEach(item => {
+  item.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      item.click();
+    }
+  });
+});
+const navToggler = document.querySelector('.nav__toggler');
+const navLinks = document.querySelector('.nav__links');
+
+navToggler.addEventListener('click', () => {
+  navToggler.classList.toggle('active');
+  // Toggle between showing and hiding the nav links
+  // Use classes instead of inline styling for consistency
+  navLinks.classList.toggle('expanded');
+});
+
+// Sticky navbar logic
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) { // Adjust the scroll distance as desired
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
+
+AOS.init();
+
+
+navToggler.addEventListener('click', () => {
+  navToggler.classList.toggle('active');
+  // Toggle between showing and hiding the nav links
+  // Use classes instead of inline styling for consistency
+  navLinks.classList.toggle('expanded');
+});  const backToTopButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // Show button after scrolling down 300px
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const brandLogos = document.querySelectorAll('.brand-logo');
+
+    brandLogos.forEach(logo => {
+      const img = logo.querySelector('img');
+      const originalSrc = img.src;
+      const colorSrc = img.getAttribute('data-color');
+
+      logo.addEventListener('mouseenter', () => {
+        img.src = colorSrc;
+      });
+
+      logo.addEventListener('mouseleave', () => {
+        img.src = originalSrc;
+      });
+    });
+  });
+
+  </script>
+</body>
+</html>

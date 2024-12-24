@@ -22,15 +22,16 @@
         </div>
      
         <ul class="nav__links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Inventory</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#inventory">Inventory</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
 
         <div class="nav__action" data-aos="fade-left">
-          <a href="#" class="btn-primary desktop-only">Get Started</a>
+          <a href="tel:+13478651448" class="btn-primary desktop-only">Call Us</a>
           <button class="nav__toggler mobile-only" aria-label="Toggle navigation">
             <span></span>
             <span></span>
@@ -42,7 +43,7 @@
   </header>
   
 
-  <main><section class="hero">
+  <main><section class="hero" id="home">
     <div class="hero__gradient-overlay"></div>
     <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="mercedes.jpg">
       <source src="carsvid3.mp4" type="video/mp4" />
@@ -59,7 +60,7 @@
         <li>Unrivaled customer relations and support</li>
         <li>Nationwide delivery</li>
       </ul>
-      <a href="#" class="btn-primary hero__btn" data-aos="zoom-in" data-aos-delay="600">Join Now</a>
+      <a href="#about" class="btn-primary hero__btn" data-aos="zoom-in" data-aos-delay="600">Learn More</a>
     </div>
   
     <div class="hero__event-wrapper" data-aos="fade-left" data-aos-delay="800">
@@ -114,7 +115,7 @@
         <span class="about__circle about__circle--3"></span>
       </div>
       
-      <div class="container about__container">
+      <div class="container about__container" id="about">
         <div class="about__text" data-aos="fade-right">
           <h2 class="about__heading">About Us</h2>
           <h3 class="about__subheading">Delivering Your Dream Car</h3>
@@ -132,7 +133,7 @@
             financing, and nationwide availability. We’re here to elevate your journey on 
             the road, delivering excellence at every turn.
           </p>
-          <a href="#" class="btn-primary about__btn" data-aos="zoom-in" data-aos-delay="200">Learn More</a>
+          <!-- <a href="#" class="btn-primary about__btn" data-aos="zoom-in" data-aos-delay="200">Learn More</a> -->
         </div>
         <div class="about__image-wrapper" data-aos="fade-left">
           <img src="chevvy.jpg" alt="Showroom or Vehicle" class="about__image" loading="lazy"/>
@@ -140,7 +141,64 @@
       </div>
     </section>
 
-    <section class="video-section">
+
+    <section class="services" data-aos="fade-up" data-aos-duration="1000">
+      <div class="about__parallax">
+        <span class="about__circle about__circle--1"></span>
+        <span class="about__circle about__circle--2"></span>
+        <span class="about__circle about__circle--3"></span>
+      </div>
+      <div class="container services__container" id="services">
+        <h2 class="services__title">Our Services</h2>
+        <p class="services__subtitle">
+          At KRKMotors, we go the extra mile to ensure every aspect of your car ownership experience 
+          is remarkable. From pre-purchase guidance to professional after-sales support, we’ve got you covered.
+        </p>
+    
+        <div class="services__cards">
+          <!-- Service Card 1 -->
+          <div class="services__card" data-aos="fade-up" data-aos-delay="100">
+            <div class="services__icon">
+              <i class="fa-solid fa-car" aria-hidden="true"></i>
+            </div>
+            <h3 class="services__card-title">Vehicle Financing</h3>
+            <p class="services__card-desc">
+              Get flexible financing options tailored to your needs. 
+              We collaborate with leading financial institutions to make car ownership seamless.
+            </p>
+          </div>
+    
+          <!-- Service Card 2 -->
+          <div class="services__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="services__icon">
+              <i class="fa-solid fa-tools" aria-hidden="true"></i>
+            </div>
+            <h3 class="services__card-title">Maintenance & Repairs</h3>
+            <p class="services__card-desc">
+              Keep your vehicle in peak condition. Our certified technicians use genuine parts 
+              and advanced diagnostics for top-notch service.
+            </p>
+          </div>
+    
+          <!-- Service Card 3 -->
+          <div class="services__card" data-aos="fade-up" data-aos-delay="300">
+            <div class="services__icon">
+              <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+            </div>
+            <h3 class="services__card-title">Trade-Ins & Upgrades</h3>
+            <p class="services__card-desc">
+              Ready for something new? Trade in your current ride and step into the latest models 
+              with unbeatable deals and expert guidance.
+            </p>
+          </div>
+    
+          <!-- Add more cards if needed -->
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="video-section" id="inventory">
       <div class="video-section__overlay"></div>
       <video class="video-section__video" autoplay muted loop playsinline preload="metadata" poster="car4.jpg">
         <source src="carsvid2.mp4" type="video/mp4" />
@@ -154,12 +212,12 @@
           At KRKMotors, innovation drives everything we do. Embrace cutting-edge technology, unparalleled comfort, 
           and an elevated lifestyle that puts you in control of your journey.
         </p>
-        <a href="#" class="btn-primary video-section__btn" data-aos="zoom-in" data-aos-delay="300">Explore Our Fleet</a>
+        <a href="inventory.html" class="btn-primary video-section__btn" data-aos="zoom-in" data-aos-delay="300">Explore Our Fleet</a>
       </div>
     </section>
 
     <section class="gallery-section" data-aos="fade-up">
-      <div class="container">
+      <div class="container" id="gallery">
         <div class="gallery-header" data-aos="fade-up" data-aos-delay="100">
           <h2 class="gallery-title">Our Exclusive Fleet</h2>
           <p class="gallery-desc">
@@ -214,7 +272,7 @@
     
       <!-- Add the CTA button here -->
       <div class="container" data-aos="zoom-in" data-aos-delay="200" style="text-align:center; margin-top:2rem;">
-        <a href="#" class="btn-primary about__btn">View More</a>
+        <a href="gallery.html" class="btn-primary about__btn">View More</a>
       </div>
     </section>
     
@@ -350,36 +408,86 @@
     </div>
     </section>
   </div>
-
-
+<!-- FINAL SECTION WRAPPER -->
 <div class="final-section">
-    <section data-aos="fade-up" data-aos-duration="1000">
-      <!-- Landscape Image -->
-      <div class="final-section__landscape" data-aos="zoom-in" data-aos-delay="100">
-        <img src="vincentetdussault.webp" alt="KRKMotors Landscape" class="final-section__landscape-img">
+  <section data-aos="fade-up" data-aos-duration="1000">
+    <!-- Landscape Image -->
+    <div class="final-section__landscape" data-aos="zoom-in" data-aos-delay="100">
+      <img src="vincentetdussault.webp" alt="KRKMotors Landscape" class="final-section__landscape-img">
+    </div>
+
+    <!-- Content Container -->
+    <div class="final-section__content-container container">
+      <!-- Portrait Image -->
+      <div class="final-section__portrait" data-aos="fade-up" data-aos-delay="300">
+        <img src="deal.jpg" alt="KRKMotors Portrait" class="final-section__portrait-img">
       </div>
-    
-      <!-- Content Container -->
-      <div class="final-section__content-container container">
-        <!-- Portrait Image -->
-        <div class="final-section__portrait" data-aos="fade-up" data-aos-delay="300">
-          <img src="deal.jpg" alt="KRKMotors Portrait" class="final-section__portrait-img">
-        </div>
-    
-        <!-- Text Content -->
-        <div class="final-section__content" data-aos="fade-right" data-aos-delay="500">
-          <h2 class="final-section__title">Elevate Your Drive</h2>
-          <h3 class="final-section__subtitle">Experience Beyond the Ordinary</h3>
-          <p class="final-section__desc">
-            At KRKMotors, we believe that driving should be more than a means of transportation—it should be an art form. 
-            Our commitment to excellence, innovation, and unparalleled craftsmanship ensures that every moment behind 
-            the wheel resonates with passion and precision.
-          </p>
-          <a href="#" class="btn-primary final-section__btn" data-aos="zoom-in" data-aos-delay="700">Contact Us</a>
-        </div>
+
+      <!-- Text Content -->
+      <div class="final-section__content" data-aos="fade-right" data-aos-delay="500" id="contact">
+        <h2 class="final-section__title">Elevate Your Drive</h2>
+        <h3 class="final-section__subtitle">Experience Beyond the Ordinary</h3>
+        <p class="final-section__desc">
+          At KRKMotors, we believe that driving should be more than a means of 
+          transportation—it should be an art form. Our commitment to excellence, 
+          innovation, and unparalleled craftsmanship ensures that every moment 
+          behind the wheel resonates with passion and precision.
+        </p>
+        <!-- CONTACT US BUTTON with data-car attribute -->
+        <a
+          href="#"
+          class="btn-primary final-section__btn"
+          data-aos="zoom-in"
+          data-aos-delay="700"
+          data-car="KRKMotors"
+          id="finalSectionContactBtn"
+        >
+          Contact Us
+        </a>
       </div>
-    </section>
-  </div>   
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT MODAL (Hidden by default) -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Close Modal">&times;</button>
+    <h3 class="modal-title">Contact Us</h3>
+    <p class="modal-subtitle">
+      Interested in <span id="modalCarName">KRKMotors</span>? 
+      Please fill out the form or connect via social links below.
+    </p>
+
+    <!-- Contact Form -->
+    <form class="modal-form">
+      <label for="fullName">Name</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Your Name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+
+      <button type="submit" class="modal-submit-btn">Send</button>
+    </form>
+
+    <!-- Social Links -->
+    <div class="modal-socials">
+      <a href="#" class="modal-social-link" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+      </a>
+      <a href="#" class="modal-social-link" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="#" class="modal-social-link" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i> Facebook
+      </a>
+    </div>
+  </div>
+</div>
+
     
 
 
@@ -423,7 +531,7 @@
           <i class="fa-solid fa-location-dot"></i> 1234 Luxury Ave, Motor City, USA
         </p>
         <p class="footer__contact">
-          <i class="fa-solid fa-phone"></i> +1 (234) 567-8901
+          <i class="fa-solid fa-phone"></i>  +1 (347) 865-1448 <br> +234 (816) 879-3282
         </p>
         <p class="footer__contact">
           <i class="fa-solid fa-envelope"></i> info@krkmotors.com
@@ -465,7 +573,10 @@
 
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js"
 
+></script>
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
@@ -607,6 +718,33 @@ backToTopButton.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+  // Modal references
+  const finalSectionContactBtn = document.getElementById('finalSectionContactBtn');
+  const modalOverlay = document.getElementById('contactModal');
+  const modalCloseBtn = document.querySelector('.modal-close');
+  const modalCarName = document.getElementById('modalCarName');
+
+  // Click "Contact Us" => Open Modal
+  finalSectionContactBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent link from navigating
+    const carName = finalSectionContactBtn.getAttribute('data-car');
+    modalCarName.textContent = carName || 'KRKMotors';
+    modalOverlay.classList.add('active');
+  });
+
+  // Close Modal via "X"
+  modalCloseBtn.addEventListener('click', () => {
+    modalOverlay.classList.remove('active');
+  });
+
+  // Close if user clicks outside modal content
+  modalOverlay.addEventListener('click', (e) => {
+    if (e.target === modalOverlay) {
+      modalOverlay.classList.remove('active');
+    }
+  });
+
 
   </script>
 </body>
